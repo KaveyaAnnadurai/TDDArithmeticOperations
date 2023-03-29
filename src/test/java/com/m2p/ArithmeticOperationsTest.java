@@ -41,4 +41,47 @@ public class ArithmeticOperationsTest {
         assertEquals(expectedValue,actualValue);
     }
 
+    @Test
+    void getEightWhenTwoMultipliedToFour(){
+        int expectedValue = 8;
+
+        //Act
+        int actualValue = arithmeticObject.multiply(2,4);
+
+        //Assert
+        assertEquals(expectedValue,actualValue);
+    }
+    @Test
+    void getMinusEightWhenMinusTwoMultipliedToFour(){
+        int expectedValue = -8;
+
+        //Act
+        int actualValue = arithmeticObject.multiply(-2,4);
+
+        //Assert
+        assertEquals(expectedValue,actualValue);
+    }
+
+    @Test
+    void getMinusEightWhenTwoMultipliedToMinusFour(){
+        int expectedValue = -8;
+
+        //Act
+        int actualValue = arithmeticObject.multiply(2,-4);
+
+        //Assert
+        assertEquals(expectedValue,actualValue);
+    }
+    @Test
+    void getEightWhenMinusTwoMultipliedToMinusFour(){
+        int expectedValue = 8;
+
+        //Act
+        int actualValue = arithmeticObject.multiply(-2,-4);
+
+        //Assert
+        assertEquals(expectedValue,actualValue);
+    }
+
+
 }

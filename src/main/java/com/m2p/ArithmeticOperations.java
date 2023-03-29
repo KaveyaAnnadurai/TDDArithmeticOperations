@@ -9,4 +9,7 @@ public class ArithmeticOperations {
         return firstInputNumber-secondInputNumber;
     }
 
+    int multiply(int firstInputNumber, int secondInputNumber){
+        return firstInputNumber*secondInputNumber;
+    }
 }
