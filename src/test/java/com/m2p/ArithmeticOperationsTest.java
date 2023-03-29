@@ -3,10 +3,12 @@ package com.m2p;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertThrows;
 
 public class ArithmeticOperationsTest {
     ArithmeticOperations arithmeticObject = new ArithmeticOperations();
 
+    //Addition testcases:
     @Test
     void getFourWhenThreeAddedToOne(){
         //Arrange
@@ -19,6 +21,7 @@ public class ArithmeticOperationsTest {
         assertEquals(expectedValue,actualValue);
     }
 
+    //Subtraction testcases:
     @Test
     void getSevenWhenFiveSubtractedFromEleven(){
          int expectedValue = 6;
@@ -41,6 +44,7 @@ public class ArithmeticOperationsTest {
         assertEquals(expectedValue,actualValue);
     }
 
+    //Multiplication testcases :
     @Test
     void getEightWhenTwoMultipliedToFour(){
         int expectedValue = 8;
@@ -83,5 +87,22 @@ public class ArithmeticOperationsTest {
         assertEquals(expectedValue,actualValue);
     }
 
+    //division test cases:
+    @Test
+    void getFiveWhenTwentyFiveDividedByFive(){
+        int expectedValue = 5;
 
+        //Act
+        int actualValue = arithmeticObject.divide(25,5);
+
+        //Assert
+        assertEquals(expectedValue,actualValue);
+    }
+
+    @Test
+    void toThrowExceptionWhenDividedByZero(){
+        assertThrows(ArithmeticException.class, () ->{
+            arithmeticObject.divide(3,0);
+        });
+    }
 }
